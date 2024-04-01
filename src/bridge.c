@@ -109,6 +109,7 @@ int bridge__new(struct mosquitto__bridge *bridge)
 	new_context->tls_ocsp_required = new_context->bridge->tls_ocsp_required;
 	new_context->tls_version = new_context->bridge->tls_version;
 	new_context->tls_insecure = new_context->bridge->tls_insecure;
+	new_context->tls_use_os_certs = true;
 	new_context->tls_alpn = new_context->bridge->tls_alpn;
 	new_context->tls_engine = db.config->default_listener.tls_engine;
 	new_context->tls_keyform = db.config->default_listener.tls_keyform;
